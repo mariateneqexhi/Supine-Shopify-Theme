@@ -22,7 +22,8 @@
 }
 
 .multicolumn-card__image-wrapper--third-width {
-  width: 33%;
+  width: 100%;
+  max-width: 100px;
 }
 
 .multicolumn-card__image-wrapper--half-width {

@@ -3,6 +3,7 @@
   --alpha-button-border: 1;
   --alpha-link: 0.85;
   --alpha-badge-border: 0.1;
+  --svg-fill-color: #000;
 }
 
 .product-card-wrapper .card,
@@ -502,7 +503,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
   font-family: inherit;
 }
 
@@ -710,7 +711,7 @@ summary::-webkit-details-marker {
 *:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  /* box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3); */
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
@@ -1238,7 +1239,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: 0;
-  padding: 0 3rem;
+  padding: 1rem 3.3rem;
   cursor: pointer;
   font: inherit;
   font-size: 1.5rem;
@@ -1297,7 +1298,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button--secondary:after {
-  --border-opacity: var(--buttons-border-opacity);
+  /* --border-opacity: var(--buttons-border-opacity); */
 }
 
 .button:focus-visible,
@@ -1583,7 +1584,7 @@ details[open] > .share-button__fallback {
 .customer select {
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgb(var(--color-background));
+  background-color: transparent;
   color: rgb(var(--color-foreground));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
@@ -1613,8 +1614,8 @@ details[open] > .share-button__fallback {
   bottom: 0;
   left: 0;
   border-radius: var(--inputs-radius-outset);
-  box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset)
-    var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
+  /* box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset)
+    var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity)); */
   z-index: -1;
 }
 
@@ -1631,9 +1632,6 @@ details[open] > .share-button__fallback {
   bottom: var(--inputs-border-width);
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
-  border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
-  transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
 
@@ -1651,8 +1649,8 @@ details[open] > .share-button__fallback {
 .customer .field:hover.field:after,
 .customer select:hover.select:after,
 .localization-form__select:hover.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width))
-    rgba(var(--color-foreground), var(--inputs-border-opacity));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width))
+    rgba(var(--color-foreground), var(--inputs-border-opacity)); */
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -1662,7 +1660,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground)); */
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -1672,7 +1670,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground)); */
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -1715,7 +1713,10 @@ details[open] > .share-button__fallback {
   position: relative;
   width: 100%;
   display: flex;
-  transition: box-shadow var(--duration-short) ease;
+  /* transition: box-shadow var(--duration-short) ease; */
+  background: #F0F0F0;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .customer .field {
@@ -1732,19 +1733,19 @@ details[open] > .share-button__fallback {
   text-align: left;
   padding: 1.5rem;
   margin: var(--inputs-border-width);
-  transition: box-shadow var(--duration-short) ease;
+  /* transition: box-shadow var(--duration-short) ease; */
 }
 
 .field__label,
 .customer .field label {
   font-size: 1.6rem;
-  left: calc(var(--inputs-border-width) + 2rem);
+  left: calc(var(--inputs-border-width) + 5rem);
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(0,0,0, 0.40);
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -1757,7 +1758,6 @@ details[open] > .share-button__fallback {
 .customer .field input:-webkit-autofill ~ label {
   font-size: 1rem;
   top: calc(var(--inputs-border-width) + 0.5rem);
-  left: calc(var(--inputs-border-width) + 2rem);
   letter-spacing: 0.04rem;
 }
 
@@ -1793,7 +1793,7 @@ details[open] > .share-button__fallback {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 4.4rem;
 }
@@ -2188,6 +2188,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   flex-wrap: wrap;
   align-content: center;
   grid-area: announcements;
+  gap: 2px;
 }
 
 .announcement-bar .slider--everywhere {
@@ -2258,14 +2259,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .announcement-bar__link {
   display: flex;
-  width: 100%;
-  text-decoration: none;
   height: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.announcement-bar__link:hover {
   text-decoration: underline;
 }
 
@@ -2279,7 +2275,6 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .announcement-bar__message {
   text-align: center;
-  padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
   min-height: 3.8rem;
@@ -2407,7 +2402,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
     grid-template-columns: auto auto 1fr;
-    column-gap: 2rem;
+    column-gap: 2.5rem;
   }
 
   .header--middle-center:not(.drawer-menu) {
@@ -2529,6 +2524,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
   grid-area: icons;
   justify-self: end;
   padding-right: 0.8rem;
+  width: 100%;
+  align-items: center;
 }
 
 .header__icons .shopify-app-block {
@@ -2577,7 +2574,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
+  /* margin-right: -1.2rem; */
 }
 
 .header__icon--menu[aria-expanded='true']::before {

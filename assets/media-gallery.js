@@ -44,7 +44,7 @@ if (!customElements.get('media-gallery')) {
           if (this.elements.viewer.slider) this.elements.viewer.resetPages();
         }
 
-        this.preventStickyHeader();
+        // this.preventStickyHeader();
         window.setTimeout(() => {
           if (this.elements.thumbnails) {
             activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
@@ -92,11 +92,11 @@ if (!customElements.get('media-gallery')) {
         if (deferredMedia) deferredMedia.loadContent(false);
       }
 
-      preventStickyHeader() {
-        this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
-        if (!this.stickyHeader) return;
-        this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-      }
+      // preventStickyHeader() {
+      //   this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
+      //   if (!this.stickyHeader) return;
+      //   this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
+      // }
 
       removeListSemantic() {
         if (!this.elements.viewer.slider) return;

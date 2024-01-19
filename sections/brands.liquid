@@ -1,0 +1,53 @@
+<div style="text-align: center;" class="max-w-screen-xl my-20 m-auto">
+  <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'about_item' %}
+          <div {{ block.shopify_attributes }} class="mx-5">
+            <div class="bg-[#C1DCDC] m-auto p-7 rounded-full w-24">
+              <img
+                src="{{ block.settings.icon | image_url }}"
+                alt="{{ block.settings.item.title }}"
+                style="margin: auto;"
+                width="40"
+                height="40"
+                loading="eager"
+              >
+            </div>
+            <h4 class="mb-3 mt-6 font-bold">{{ block.settings.item_heading }}</h4>
+            <p>{{ block.settings.item_subtitle }}</p>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Company Logos",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Logos",
+      "type": "company_logos",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "companys_image",
+          "label": "Companys image"
+        },
+        {
+          "type": "text",
+          "id": "company_names",
+          "label": "Company names"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Company Logos"
+    }
+  ]
+}
+{% endschema %}
