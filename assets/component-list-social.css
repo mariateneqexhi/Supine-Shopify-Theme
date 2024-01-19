@@ -1,9 +1,14 @@
 .list-social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
-
+ul.list-social {
+  padding: 0;
+}
+.list-social__link:first-child {
+  padding-left: 0;
+}
 @media only screen and (max-width: 749px) {
   .list-social {
     justify-content: center;

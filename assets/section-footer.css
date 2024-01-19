@@ -52,6 +52,7 @@
 .footer__content-bottom-wrapper {
   display: flex;
   width: 100%;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 749px) {
@@ -287,7 +288,7 @@
 }
 
 .footer__content-bottom-wrapper--center {
-  justify-content: center;
+  justify-content: start;
 }
 
 .footer__copyright {
@@ -410,6 +411,7 @@
   display: block;
   height: auto;
   max-width: 100%;
+  border: none;
 }
 
 .footer-block__brand-info {

@@ -8,8 +8,10 @@
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>We have clothes that suits your style and which you’re proud to wear. From women to men.<\/p>"
+            "image": "shopify:\/\/shop_images\/SHOP.CO.svg",
+            "heading": "",
+            "subtext": "<p>We have clothes that suits your style and which you’re proud to wear. From women to men.<\/p>",
+            "show_social": true
           }
         },
         "footer-1": {
@@ -53,7 +55,7 @@
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
