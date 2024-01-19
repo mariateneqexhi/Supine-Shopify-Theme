@@ -5,24 +5,26 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Sign up and get 20% off to your first order. Sign Up Now",
-            "link": ""
-          }
-        },
         "announcement_hcaGxP": {
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
+            "text_anchored": "",
             "link": ""
+          }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Sign up and get 20% off to your first order.",
+            "text_anchored": "Sign Up Now",
+            "link": "shopify:\/\/products\/gift-card"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_hcaGxP"
+        "announcement_hcaGxP",
+        "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "scheme-4",
