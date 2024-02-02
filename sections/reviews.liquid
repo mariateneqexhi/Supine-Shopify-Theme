@@ -1,0 +1,174 @@
+<style>
+  .review-wrapper {
+    max-width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 5px;
+    height: 300px;
+  }
+  .costumer-name {
+    display: flex;
+    align-items: center;
+  }
+  .costumer-name h4 {
+    padding-right: 5px;
+  }
+  .costumer-rating fieldset {
+    padding-left: 0;
+  }
+  .reviewers-heading {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .swiper-pagination {
+    top: -20px !important;
+    left: auto !important;
+    right: 0 !important;
+    width: fit-content !important;
+    height: fit-content !important;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    width: 12px;
+    border-radius: 4px;
+    background-color: #d9d9d9;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 48px;
+    border-radius: 4px;
+    background-color: #c1dcdc;
+  }
+  .swiper {
+    cursor: pointer;
+  }
+
+  .swiper-button-next:after {
+    content: '';
+  }
+  .swiper-button-prev:after {
+    content: '';
+  }
+  .swiper-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-buttons {
+    width: 100px;
+    position: relative;
+    height: 40px;
+    align-self: end;
+  }
+</style>
+
+<div class="page-width shopify-section-costumers">
+  <div class="max-w-screen-xl m-auto">
+    <h2 class="reviewers-heading">
+      {{ section.settings.title }}
+    </h2>
+  </div>
+
+  <div class="swiper-buttons-wrapper">
+    <div class="swiper-buttons">
+      <div class="swiper-button-prev">
+        {% render 'icon-arrowleft' %}
+      </div>
+      <div class="swiper-button-next">
+        {% render 'icon-arrowright' %}
+      </div>
+    </div>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'costumer' %}
+            <div
+              {{ block.shopify_attributes }}
+              class="swiper-slide"
+            >
+              <div class="flex flex-col review-wrapper">
+                <div class="flex items-center costumer-rating">
+                  <img
+                    src="{{ block.settings.rating | append: "-stars.svg" | asset_url }}"
+                    loading="eager"
+                    width="auto"
+                    height="auto"
+                  >
+                </div>
+                <div class="costumer-name">
+                  <h4>{{ block.settings.name }}</h4>
+                  {% render 'icon-checked' %}
+                </div>
+
+                <p class="pt-12 pr-12 pl-12 text-[#1e1e1ebf] text-lg font-medium">{{ block.settings.comment }}</p>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Costumers feedback",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "OUR HAPPY CUSTOMERS"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Costumer",
+      "type": "costumer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "comment",
+          "label": "Costumer's comment"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Costumers name",
+          "default": "Sarah M."
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 0.5,
+          "max": 5,
+          "step": 0.5,
+          "default": 5,
+          "label": "Costumer's rating"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Costumers feedback"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .hide-scrollbar {
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    /* safari and chrome */
+    display: none;
+  }
+</style>

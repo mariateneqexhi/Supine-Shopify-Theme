@@ -99,3 +99,7 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.collection .slider-mobile-gutter ul {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}

@@ -22,7 +22,7 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -35,12 +35,13 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image": "shopify:\/\/shop_images\/Group_16.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
@@ -125,99 +126,58 @@
         "padding_bottom": 36
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>TOP SELLING<\/strong>",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
+    "featured_collection_PcmLWh": {
       "type": "featured-collection",
       "settings": {
-        "title": "",
-        "heading_size": "h0",
+        "title": "<strong>NEW ARRIVALS<\/strong>",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "new-arrivals",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "outline",
+        "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "image_ratio": "portrait",
         "image_shape": "default",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "casual"
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "formal"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
+    "featured_collection_XgBxRJ": {
+      "type": "featured-collection",
       "settings": {
-        "heading": "BROWSE BY dress STYLE",
-        "heading_size": "h0",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
+        "title": "<strong>TOP SELLING<\/strong>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "top-selling",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -257,7 +217,7 @@
         "featured_collection_mKJcMN"
       ],
       "settings": {
-        "title": "<strong>BROWSE BY dress STYLE<\/strong>",
+        "title": "<strong>BROWSE BY STYLE<\/strong>",
         "heading_size": "h0",
         "image_ratio": "square",
         "columns_desktop": 4,
@@ -268,14 +228,88 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "reviews_KaMdtX": {
+      "type": "reviews",
+      "blocks": {
+        "costumer_T8AwcP": {
+          "type": "costumer",
+          "settings": {
+            "comment": "\"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”",
+            "name": "Sarah M.",
+            "rating": 3
+          }
+        },
+        "costumer_kBk4c8": {
+          "type": "costumer",
+          "settings": {
+            "comment": "\"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”",
+            "name": "Alex K.",
+            "rating": 5
+          }
+        },
+        "costumer_Uarc43": {
+          "type": "costumer",
+          "settings": {
+            "comment": "\"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”",
+            "name": "James L.",
+            "rating": 5
+          }
+        },
+        "costumer_V8VJTD": {
+          "type": "costumer",
+          "settings": {
+            "comment": "\"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.\"",
+            "name": "Ethan R.",
+            "rating": 3.5
+          }
+        }
+      },
+      "block_order": [
+        "costumer_T8AwcP",
+        "costumer_kBk4c8",
+        "costumer_Uarc43",
+        "costumer_V8VJTD"
+      ],
+      "settings": {
+        "title": "OUR HAPPY CUSTOMERS"
+      }
+    },
+    "newsletter_4KmeA3": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_7zX79h": {
+          "type": "heading",
+          "settings": {
+            "heading": "STAY UP TO DATE ABOUT OUR LATEST OFFERS",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_grfWWA": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_7zX79h",
+        "email_form_grfWWA"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "image_banner",
     "multicolumn",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "collection_list_6UeqUp"
+    "featured_collection_PcmLWh",
+    "featured_collection_XgBxRJ",
+    "collection_list_6UeqUp",
+    "reviews_KaMdtX",
+    "newsletter_4KmeA3"
   ]
 }

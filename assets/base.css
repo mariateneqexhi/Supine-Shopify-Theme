@@ -834,6 +834,7 @@ summary::-webkit-details-marker {
 
   .title-wrapper-with-link {
     align-items: center;
+    justify-content: center;
   }
 
   .title-wrapper-with-link .title {
@@ -932,6 +933,9 @@ summary::-webkit-details-marker {
   .grid__item.slider__slide--full-width {
     width: 100%;
     max-width: none;
+  }
+  .reviewers-heading {
+    font-size: 32px !important;
   }
 }
 
@@ -1332,6 +1336,7 @@ button.shopify-payment-button__button--unbranded {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
+  color: #fff;
 }
 
 .button--tertiary {
@@ -1790,11 +1795,11 @@ details[open] > .share-button__fallback {
   display: flex;
   height: 4.4rem;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 0;
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  top: 0;
+  top: 0; */
   width: 4.4rem;
 }
 
@@ -3368,6 +3373,39 @@ details-disclosure > details {
     transform: rotate(0.5deg); /* Less intense rotation for collage items. */
   }
 
+  .collection-list .big-column {
+    grid-column: span 2;
+    width: calc(100%) !important;
+    max-width: calc(100%) !important;
+    max-height: 300px;
+    overflow: hidden;
+  }
+  .collection-list__item {
+    border-radius: 20px;
+  }
+  .collection-list__item:not(.big-column) {
+    grid-column: span 1;
+    width: calc(100%) !important;
+    max-width: calc(100%) !important;
+    max-height: 300px;
+    overflow: hidden;
+  }
+  .collection-list-wrapper {
+    background: #F0F0F0;
+    border-radius: 20px;
+  }
+  .collection-list .collection-list__item .card__content {
+    position: absolute;
+  }
+  .collection-list .collection-list__item .card__content .card__heading {
+    font-weight: bold;
+  }
+  .collection-list .collection-list__item .card .card__media .media img {
+    position: fixed;
+  }
+  .grid-product__image-mask .image-wrap {
+    padding-bottom: 100% !important;
+}
   .animate--hover-3d-lift .product-grid .grid__item:hover,
   .animate--hover-3d-lift .collection-list .grid__item:hover,
   .animate--hover-3d-lift .collage__item:hover,
