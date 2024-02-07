@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  background: #f0f0f0;
 }
 
 .banner__box {
@@ -159,9 +160,13 @@
 .banner__media {
   height: 100%;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
+  width: 50%;
+  background: #f0f0f0;
+}
+.banner__media img {
+  object-fit: contain;
 }
 
 .banner__media-half {
