@@ -27,15 +27,39 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "stats_kCkEDc": {
+          "type": "stats",
+          "settings": {
+            "stats_numbers": "200+",
+            "stats_text": "International Brands"
+          }
+        },
+        "stats_K9QHAC": {
+          "type": "stats",
+          "settings": {
+            "stats_numbers": "2,000+",
+            "stats_text": "High-Quality Products"
+          }
+        },
+        "stats_bEU4E8": {
+          "type": "stats",
+          "settings": {
+            "stats_numbers": "30,000+",
+            "stats_text": "Happy Customers"
+          }
         }
       },
       "block_order": [
         "heading",
         "text",
-        "button"
+        "button",
+        "stats_kCkEDc",
+        "stats_K9QHAC",
+        "stats_bEU4E8"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_16.svg",
+        "image": "shopify:\/\/shop_images\/Group_18.svg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
@@ -44,8 +68,8 @@
         "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "multicolumn": {
@@ -149,7 +173,7 @@
         "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -177,7 +201,7 @@
         "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }

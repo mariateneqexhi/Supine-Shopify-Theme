@@ -99,3 +99,8 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .collection .slider-buttons {
+    display: none;
+  }
+}

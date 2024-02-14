@@ -2,6 +2,24 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+@media screen and (max-width: 780px) {
+  .collection-list .card-wrapper .card__inner {
+    max-height: 300px;
+  }
+  .collection-list .card-wrapper .card__inner .card__media {
+    border-radius: 20px;
+  }
+  .collection-list .card-wrapper .card__content {
+    position: absolute;
+  }
+  .collection-list .card-wrapper .card__content .card__heading {
+    font-weight: bold;
+  }
+  .collection-list-wrapper .collection-list {
+    gap: 16px;
+  }
+}
+
 
 .collection-list-title {
   margin: 0;
@@ -16,11 +34,15 @@
   .section-collection-list .page-width {
     padding-left: 0;
     padding-right: 0;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 12px;
   }
 
   .section-collection-list .collection-list:not(.slider) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    grid-template-columns: 1fr !important;
   }
 }
 
