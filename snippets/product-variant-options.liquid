@@ -14,6 +14,24 @@
     block: block
   %}
 {% endcomment %}
+{% style %}
+  variant-radios input[type='radio'] + label[is-color] {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  variant-radios input[type='radio']:checked + label[is-color]::after {
+    margin: auto;
+    content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjUzMDYgNS4wMzA2M0w2LjUzMDYgMTMuMDMwNkM2LjQ2MDkyIDEzLjEwMDUgNi4zNzgxMyAxMy4xNTYgNi4yODY5NiAxMy4xOTM5QzYuMTk1OCAxMy4yMzE3IDYuMDk4MDYgMTMuMjUxMiA1Ljk5OTM1IDEzLjI1MTJDNS45MDA2NCAxMy4yNTEyIDUuODAyOSAxMy4yMzE3IDUuNzExNzMgMTMuMTkzOUM1LjYyMDU3IDEzLjE1NiA1LjUzNzc4IDEzLjEwMDUgNS40NjgxIDEzLjAzMDZMMS45NjgxIDkuNTMwNjNDMS44OTgzMyA5LjQ2MDg3IDEuODQyOTkgOS4zNzgwNCAxLjgwNTI0IDkuMjg2ODlDMS43Njc0OCA5LjE5NTc0IDEuNzQ4MDUgOS4wOTgwNCAxLjc0ODA1IDguOTk5MzhDMS43NDgwNSA4LjkwMDcyIDEuNzY3NDggOC44MDMwMiAxLjgwNTI0IDguNzExODdDMS44NDI5OSA4LjYyMDcyIDEuODk4MzMgOC41Mzc4OSAxLjk2ODEgOC40NjgxM0MyLjAzNzg2IDguMzk4MzcgMi4xMjA2OSA4LjM0MzAyIDIuMjExODQgOC4zMDUyN0MyLjMwMjk5IDguMjY3NTEgMi40MDA2OSA4LjI0ODA4IDIuNDk5MzUgOC4yNDgwOEMyLjU5ODAxIDguMjQ4MDggMi42OTU3MSA4LjI2NzUxIDIuNzg2ODYgOC4zMDUyN0MyLjg3ODAxIDguMzQzMDIgMi45NjA4MyA4LjM5ODM3IDMuMDMwNiA4LjQ2ODEzTDUuOTk5OTcgMTEuNDM3NUwxMy40NjkzIDMuOTY5MzhDMTMuNjEwMiAzLjgyODQ4IDEzLjgwMTMgMy43NDkzMyAxNC4wMDA2IDMuNzQ5MzNDMTQuMTk5OSAzLjc0OTMzIDE0LjM5MSAzLjgyODQ4IDE0LjUzMTggMy45NjkzOEMxNC42NzI3IDQuMTEwMjggMTQuNzUxOSA0LjMwMTM3IDE0Ljc1MTkgNC41MDA2M0MxNC43NTE5IDQuNjk5ODkgMTQuNjcyNyA0Ljg5MDk4IDE0LjUzMTggNS4wMzE4OEwxNC41MzA2IDUuMDMwNjNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+  }
+  variant-radios fieldset {
+    display: flex;
+  }
+{% endstyle %}
+
 {%- liquid
   assign variants_available_arr = product.variants | map: 'available'
   assign variants_option1_arr = product.variants | map: 'option1'
@@ -26,6 +44,7 @@
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
+    assign color_first_char = value | slice: 0
 
     for option1_name in variants_option1_arr
       case option.position
@@ -59,8 +78,16 @@
         class="disabled"
       {% endif %}
     >
-    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-      {{ value -}}
+    <label
+      for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+      {%- if color_first_char == '#' -%}
+        is-color
+        style="background-color: {{ value }};"
+      {%- endif -%}
+    >
+      {%- if color_first_char != '#' -%}
+        {{ value -}}
+      {% endif %}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}

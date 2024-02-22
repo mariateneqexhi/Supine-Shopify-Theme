@@ -95,6 +95,16 @@
                     </h2>
                   </a>
                 </div>
+                {% if block.settings.rating %}
+                  <div class="costumer-rating">
+                    <img
+                      src="{{ block.settings.rating | append: "-stars.svg" | asset_url }}"
+                      loading="eager"
+                      width="auto"
+                      height="auto"
+                    >
+                  </div>
+                {% endif %}
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
