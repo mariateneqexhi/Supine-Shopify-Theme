@@ -1611,27 +1611,28 @@ a.product__text {
 }
 
 @media screen and (min-width: 768px) {
-  .product-image-wrapper {
+  .product__column-wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr;
   }
-  .product-image-wrapper slider-component {
+  .product__column-wrapper > slider-component {
     height: 420px;
     overflow-y: scroll;
+    scrollbar-width: none;
   }
-  .product-image-wrapper slider-component ul {
+  .product__column-wrapper slider-component ul {
     margin: 12px;
   }
-  .product-image-wrapper slider-component:first-child {
-    order: 2;
+  .product__column-wrapper slider-component:nth-child(2){
+    order: 1;
   }
-  .product-image-wrapper slider-component:nth-child(2) ul {
+  .product__column-wrapper slider-component:nth-child(3) ul {
     grid-template-columns: 1fr;
   }
-  .product-image-wrapper slider-component ul li div {
+  .product__column-wrapper slider-component ul li div {
     border: none;
   }
-  .product-image-wrapper slider-component ul li button.thumbnail {
+  .product__column-wrapper slider-component ul li button.thumbnail {
     border-radius: 20px;
   }
 }
