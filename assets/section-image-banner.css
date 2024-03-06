@@ -445,7 +445,7 @@
   gap: 1rem;
   max-width: 45rem;
   word-break: break-word;
-  background-color: #000000;
+  background-color: rgba(0,0,0, 0.92);
   border-radius: 40px;
 }
 

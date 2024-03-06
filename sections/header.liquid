@@ -82,10 +82,21 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 768px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
+    }
+  }
+  @media screen and (min-width:992px) {
+    .mobile-search-button {
+      display: none;
+      }
+  }
+
+  @media screen and (max-width: 992px) {
+    .search-modal__form {
+      display: none;
     }
   }
 </style>
@@ -299,6 +310,15 @@
             </localization-form>
           {%- endif -%}
         </div>
+        <a
+          href="{{ routes.search_url }}"
+          class="search__button field__button mobile-search-button"
+          aria-label="{{ 'general.search.search' | t }}"
+        >
+          <svg class="icon icon-search" aria-hidden="true" focusable="false">
+            <use xlink:href="#icon-search">
+          </svg>
+        </a>
         {% render 'header-search', input_id: 'Search-In-Modal' %}
 
         {%- if shop.customer_accounts_enabled -%}

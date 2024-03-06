@@ -1615,11 +1615,7 @@ a.product__text {
     display: grid;
     grid-template-columns: 1fr 3fr;
   }
-  .product__column-wrapper > slider-component {
-    height: 420px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-  }
+
   .product__column-wrapper slider-component ul {
     margin: 12px;
   }

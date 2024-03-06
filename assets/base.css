@@ -1296,9 +1296,9 @@ button.shopify-payment-button__button--unbranded {
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+  /* box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background)); */
 }
 
 .button--secondary:after {
@@ -2556,7 +2556,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
     width: fit-content;
   }
   .header__icons .search__button:not(:focus-visible):not(.focused), .reset__button:not(:focus-visible):not(.focused) {
-    background-color: white !important;
+    /* background-color: white !important; */
   }
   .header__icons .search-modal__form {
     width: auto;
