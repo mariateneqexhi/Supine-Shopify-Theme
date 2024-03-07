@@ -1255,6 +1255,10 @@ button.shopify-payment-button__button--unbranded {
   background-color: rgba(var(--color-button), var(--alpha-button-background));
 }
 
+cart-remove-button a {
+  --color-button-text: #000;
+}
+
 .button:before,
 .shopify-challenge__button:before,
 .customer button:before,
