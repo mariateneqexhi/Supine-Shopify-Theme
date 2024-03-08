@@ -24,19 +24,3 @@ let swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
-  reverse: true,
-});
-
-new IntersectionObserver((entries) => {
-  if (entries[0].intersectionRatio <= 0) {
-    if (swiper.autoplay.running) {
-      swiper.autoplay.stop();
-    }
-    return;
-  }
-  if (!swiper.autoplay.running) {
-    swiper.autoplay.start();
-  }
-}).observe(document.getElementById('shopify-section-costumers'));
