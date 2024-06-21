@@ -1,7 +1,9 @@
 Design file: https://www.figma.com/community/file/1273571982885059508
 
 Used Dawn theme as starter and modified to match the design.
+
 Website: https://quickstart-bb58aa35.myshopify.com/
+
 Password: maria
 # Dawn
 
