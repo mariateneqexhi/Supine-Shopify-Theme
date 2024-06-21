@@ -1,6 +1,8 @@
 Design file: https://www.figma.com/community/file/1273571982885059508
 
 Used Dawn theme as starter and modified to match the design.
+Website: https://quickstart-bb58aa35.myshopify.com/
+Password: maria
 # Dawn
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
